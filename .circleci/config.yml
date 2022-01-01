@@ -1,0 +1,21 @@
+version: 2
+jobs:
+  build-arduino:
+    machine: true
+    steps:
+      - checkout
+      - run:
+          name: Make scripts executable 
+          command: sudo chmod -R +x ./scripts/*.sh
+      - run:
+          name: Install
+          command: ./scripts/install_arduino.sh
+      - run:
+          name: Build
+          command: ./scripts/build.sh
+
+workflows:
+  version: 2
+  build:
+    jobs:
+      - build-arduino
