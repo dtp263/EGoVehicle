@@ -22,7 +22,7 @@
   https://www.arduino.cc/en/Tutorial/BuiltInExamples/Blink
 */
 
-const LED_BUILTIN = 13;
+const int LED_BUILTIN = 13;
 
 
 // the setup function runs once when you press reset or power the board
